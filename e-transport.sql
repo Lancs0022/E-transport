@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : dim. 30 juil. 2023 à 07:48
+-- Généré le : dim. 30 juil. 2023 à 10:33
 -- Version du serveur : 8.0.31
 -- Version de PHP : 8.0.26
 
@@ -68,15 +68,19 @@ CREATE TABLE IF NOT EXISTS `client` (
   `TARIF` varchar(12) DEFAULT NULL,
   PRIMARY KEY (`IDCLIENT`),
   KEY `FK_CLIENT_ABONNEMENT` (`IDABONNEMENT`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `client`
 --
 
 INSERT INTO `client` (`IDCLIENT`, `IDABONNEMENT`, `PSEUDOCLIENT`, `TELEPHONECLIENT`, `MDP`, `TARIF`) VALUES
+(5, 0, 'fsdbhf', 542345, 'hhrgrsg', NULL),
+(6, 0, 'SSJ5', 463456, 'Ploup', NULL),
 (3, 0, 'Lancs', 347814199, 'Lancs0022', NULL),
-(4, 0, 'Rick', 562302562, '12345678', NULL);
+(4, 0, 'Rick', 562302562, '12345678', NULL),
+(7, 0, 'SSJ5', 463456, 'Ploup', NULL),
+(8, 0, 'Kk', 4547, '0000', NULL);
 
 -- --------------------------------------------------------
 
@@ -206,7 +210,7 @@ CREATE TABLE IF NOT EXISTS `reservation` (
   `ITINERAIREDEMANDE` char(32) DEFAULT NULL,
   PRIMARY KEY (`IDRESERVATION`),
   KEY `FK_RESERVATION_CLIENT` (`IDCLIENT`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Lorsqu''un client effectue une reservation, des places seront automatiquement deduits';
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Lorsqu''un client effectue une reservation, des places seront automatiquement deduits';
 
 --
 -- Déchargement des données de la table `reservation`
@@ -215,7 +219,8 @@ CREATE TABLE IF NOT EXISTS `reservation` (
 INSERT INTO `reservation` (`IDRESERVATION`, `IDCLIENT`, `HEUREPREVU`, `PLACEDEMANDE`, `ITINERAIREDEMANDE`) VALUES
 (1, 3, '20:10:00', '5', 'itineraire 1'),
 (2, 3, '07:25:00', '1', 'it2'),
-(3, 3, '07:25:00', '1', 'it2');
+(3, 3, '07:25:00', '1', 'it2'),
+(4, 8, '07:15:00', '6', '1');
 
 -- --------------------------------------------------------
 
