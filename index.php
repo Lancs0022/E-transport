@@ -20,7 +20,7 @@
         <a href="index.php" class="bouton">Accueil</a>
         <a href="page_register.php" class="bouton">Register</a>
         <a href="page_login.php" class="bouton">Login</a>
-        <a href="page_reservation.php" class="bouton">Reservation</a>
+        <a href="page_reservations.php" class="bouton">Reservation</a>
         <a href="" class="bouton">Void</a>
     </div>
     <p>

@@ -23,7 +23,7 @@ session_start();
         <a href="page_register.php" class="bouton">Register</a>
         <a href="page_login.php" class="bouton">Login</a>
         <a href="page_reservation.php" class="bouton">Reservation</a>
-        <a href="" class="bouton">Void</a>
+        <a href="page_affichageReservations.php" class="bouton">Liste de reservation</a>
     </div>
 
     
