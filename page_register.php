@@ -31,14 +31,17 @@ session_start();
             <input type="text" id="pseudo" name="pseudo" required>
 
             <label for="telephone">Téléphone :</label>
-            <input type="tel" id="telephone" name="telephone" required>
+            <input type="number" id="telephone" name="telephone" required>
 
             <label for="password">Mot de passe :</label>
             <input type="password" id="password" name="password" required>
 
             <label for="confirm_password">Confirmation du mot de passe :</label>
             <input type="password" id="confirm_password" name="confirm_password" required>
-
+            <?php
+                if(isset($_GET["erreur"]))
+                echo $_GET["erreur"];
+            ?>
             <button type="submit">Envoyer</button>
         </form>
     </div>
