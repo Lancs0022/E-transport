@@ -1,7 +1,8 @@
 <?php
 session_start();
+echo isset($_SESSION['nom']);
 
-if (isset($_SESSION['pseudo']) && !empty($_SESSION['pseudo'])) {
+if (isset($_SESSION['nom']) && !empty($_SESSION['nom'])) {
     $bdd = "e-transport";
     $DB_DSN = 'mysql:host=localhost;dbname=' . $bdd;
     $DB_USER = 'root';
@@ -38,7 +39,8 @@ if (isset($_SESSION['pseudo']) && !empty($_SESSION['pseudo'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Réservations du Client</title>
-    <link rel="stylesheet" type="text/css" href="styles.php">
+    <link rel="stylesheet" type="text/css" href="css/navbar.php">
+    <link rel="stylesheet" type="text/css" href="css/Stylereserve.php">
 </head>
 
 <body>
@@ -48,12 +50,19 @@ if (isset($_SESSION['pseudo']) && !empty($_SESSION['pseudo'])) {
     }
     ?>
 
-    <div class="Navigation">
-        <a href="index.php" class="bouton">Accueil</a>
-        <a href="page_register.php" class="bouton">Register</a>
-        <a href="page_login.php" class="bouton">Login</a>
-        <a href="page_reservation.php" class="bouton">Réservation</a>
-        <a href="page_affichageReservations.php" class="bouton">Liste de reservation</a>
+    <div class="navbar">
+        <div class="icon">
+            <img src="Logo/ETRANS3-2_-_Copie-removebg-preview.png"width="300px"class="logo">
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="index.php">Acceuil</a></li>
+                <li><a href="page_reservation.php">Faire une reservation</a></li>
+                <li><a href="page_affichageReservations.php">Mes reservations</a></li>
+                <li><a href="#">A propos</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
     </div>
 
     <div class="container">

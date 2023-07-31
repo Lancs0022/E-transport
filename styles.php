@@ -16,34 +16,35 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #87CEEB, #00008B);
+    
     min-height: 100vh;
 }
 
 a {
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .Navigation {
-    box-shadow: 5px 3px 2px  rgb(49, 49, 49);
-    background-color: rgb(101, 92, 107);
+    width: 50%;
     opacity: 0.9;
+    margin-left: 50%;
     display: flex;
     justify-content: space-evenly;
     font-family: Arial, Helvetica, sans-seriff;
     text-align: center;
     padding-top: 2px;
     padding-bottom: 2px;
-    border: 2px grey solid;
-    border-radius: 500px;
 }
 
 .container {
-    width: 50%;
+    width: fit-content;
+    color: white;
+    margin-left: 50%;
+    background: linear-gradient(to bottom, #87CEEB, #00008B);
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
-    padding: 20px;
+    padding: 2%;
     margin-top: 5%;
 }
 
@@ -52,10 +53,9 @@ h1 {
 }
 
 label,
-input,
-button {
+input {
     display: block;
-    width: 100%;
+    width: 70%;
     margin-bottom: 10px;
 }
 

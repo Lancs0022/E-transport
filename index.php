@@ -7,42 +7,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>intro</title>
-    <link rel="stylesheet" type="text/css" href="styles.php">
+    <link rel="stylesheet" type="text/css" href="css/style.php">
+    <link rel="stylesheet" type="text/css" href="css/navbar.php">
 </head>
 <body>
     <?php
-        if(isset($_SESSION['pseudo']))
+        if(isset($_SESSION['nom']))
         {
-            echo "Connecte en tant que : " .$_SESSION["pseudo"];
+            echo "Connecte en tant que : " .$_SESSION["nom"];
         }
     ?>
-    <div class="Navigation">
-        <a href="index.php" class="bouton">Accueil</a>
-        <a href="page_register.php" class="bouton">Register</a>
-        <a href="page_login.php" class="bouton">Login</a>
-        <a href="page_reservations.php" class="bouton">Reservation</a>
-        <a href="" class="bouton">Void</a>
-    </div>
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam corporis rem nulla aut harum rerum velit veritatis! Voluptate similique sint exercitationem mollitia! Quae et fugiat obcaecati, saepe nostrum hic aut. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis delectus praesentium voluptatem vel veniam eveniet id odio suscipit magni deserunt libero, voluptatum, eius quos ipsam tenetur iusto recusandae. Perspiciatis, aperiam? Lorem ipsum, dolor sit amet consectetur adipisicing elit. A consequatur esse quo consectetur quas cum porro voluptatem amet! At vel natus esse molestiae impedit veritatis obcaecati corrupti nisi eum vero?
-    </p>
-    <!-- <div class="container">
-        <h1>Formulaire d'inscription</h1>
-        <form action="accountScript.php" method="post">
-            <label for="pseudo">Pseudo :</label>
-            <input type="text" id="pseudo" name="pseudo" required>
-            
-            <label for="telephone">Téléphone :</label>
-            <input type="tel" id="telephone" name="telephone" required>
-
-            <label for="password">Mot de passe :</label>
-            <input type="password" id="password" name="password" required>
-
-            <label for="confirm_password">Confirmation du mot de passe :</label>
-            <input type="password" id="confirm_password" name="confirm_password" required>
-
-            <button type="submit">Envoyer</button>
-        </form>
-    </div> -->
+    <div class="main">
+		<div class="navbar">
+			<div class="icon">
+				<img src="Logo/ETRANS3-2_-_Copie-removebg-preview.png"width="300px"class="logo">
+			</div>
+			<div class="menu">
+				<ul>
+					<li><a href="index.php">Acceuil</a></li>
+                    <li><a href="page_reservation.php">Faire une reservation</a></li>
+                    <li><a href="page_affichageReservations.php">Mes reservations</a></li>
+					<li><a href="#">A propos</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul> 
+			</div>
+		</div>
+		<div class="content">
+			<div class="side">
+			<img class="img1" src="illustrations/Day-Trips-Photo.jpg" style="width:550px" height="300px"  alt="connexion-illustration">
+			<p>E-TRANSPORT est un système de transport</br>spécialement conçu pour les étudiants</br>Un transport pratique, fiable, économique</br>confortable et securité</p>
+			<button class="trajet"><a href="#">Voir nos trajets</a></button>
+			</div>
+			<img class="img2" src="illustrations/les-usagers-peuvent-faire-remonter-leurs-doleances-c-est-le-moment-illustration-progres-nathalie-bertheux-1686159085.jpg" style="width:550px" height="300px"  alt="connexion-illustration">
+			<img class="img3"  src="illustrations/B9728243725Z.1_20210908113711_000+G51ISO16C.1-0.jpg" style="width:550px" height="370px" alt="connexion-illustration">
+			<div class="form">
+				<button class="btnn"><a href="page_login.php">Connecter</a></button>
+				<button class="btnn"><a href="page_register.php">S'inscrire</a></button>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

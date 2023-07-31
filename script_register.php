@@ -16,15 +16,17 @@ try {
 }
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $pseudo = htmlspecialchars($_POST["pseudo"]);
+    $nom = htmlspecialchars($_POST["nom"]);
+    $prenom = htmlspecialchars($_POST["prenom"]);
     $telephone = htmlspecialchars($_POST["telephone"]);
     $password = $_POST["password"];
-    $passwordConfirm = $_POST["confirm_password"];
+    // $passwordConfirm = $_POST["confirm_password"];
 
-    if($password === $passwordConfirm){
+    if($password != null){
         // Requête pour insérer les données dans la table "client"
-        $requete = $pdo->prepare("INSERT INTO client (PSEUDOCLIENT, TELEPHONECLIENT, MDP) VALUES (:pseudo, :telephone, :password)");
-        $requete->bindParam(':pseudo', $pseudo);
+        $requete = $pdo->prepare("INSERT INTO client (NOMCLIENT, PRENOMCLIENT, TELEPHONECLIENT, MDP) VALUES (:nom, :prenom, :telephone, :password)");
+        $requete->bindParam(':nom', $nom);
+        $requete->bindParam(':prenom', $prenom);
         $requete->bindParam(':telephone', $telephone);
         $requete->bindParam(':password', $password);
 

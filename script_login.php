@@ -16,9 +16,9 @@ try {
     die("Erreur : " . $e->getMessage());
 }
 
-function login($pseudo, $password, $pdo) {
-    $requete = $pdo->prepare("SELECT * FROM client WHERE PSEUDOCLIENT = :pseudo");
-    $requete->bindParam(':pseudo', $pseudo);
+function login($nom, $password, $pdo) {
+    $requete = $pdo->prepare("SELECT * FROM client WHERE NOMCLIENT = :nom");
+    $requete->bindParam(':nom', $nom);
     $requete->execute();
     $client = $requete->fetch(PDO::FETCH_ASSOC);
 
@@ -30,19 +30,19 @@ function login($pseudo, $password, $pdo) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $pseudo = htmlspecialchars($_POST["pseudo"]);
+    $nom = htmlspecialchars($_POST["nom"]);
     $password = $_POST["password"];
 
-    $client = login($pseudo, $password, $pdo);
+    $client = login($nom, $password, $pdo);
 
     if ($client) {
         $_SESSION['user_id'] = $client['IDCLIENT'];
-        $_SESSION['pseudo'] = $client['PSEUDOCLIENT'];
-        echo "Connexion réussie ! Bienvenue, " . $client['PSEUDOCLIENT'] . "!";
+        $_SESSION['nom'] = $client['NOMCLIENT'];
+        echo "Connexion réussie ! Bienvenue, " . $client['NOMCLIENT'] . "!";
         header("Location: page_reservation.php");
     } else {
         // Identifiants incorrects, afficher un message d'erreur à l'utilisateur.
-        echo "Pseudo ou mot de passe incorrect.";
+        echo "nom ou mot de passe incorrect.";
     }
 }
 ?>
