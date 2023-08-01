@@ -45,7 +45,7 @@ session_start();
                     <input type="text" name="prenom"placeholder="Prénom">
                     <input type="number" name="telephone"placeholder="Telephone">
                     <input type="password" name=""placeholder="Mot de passe">
-                    <button class="btnn" type="submit"><a href="#">Créer un compte</a></button>
+                    <button class="btnn" type="submit"><a href="script_register.php">Créer un compte</a></button>
                 </form>
 			</div>
 		</div>
