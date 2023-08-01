@@ -1,5 +1,8 @@
 <?php
     session_start();
+	if(isset($_GET["deco"])){
+		$_SESSION["nom"] = null;
+	}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -36,7 +39,7 @@
 			<div class="side">
 			<img class="img1" src="illustrations/Day-Trips-Photo.jpg" style="width:550px" height="300px"  alt="connexion-illustration">
 			<p>E-TRANSPORT est un système de transport</br>spécialement conçu pour les étudiants</br>Un transport pratique, fiable, économique</br>confortable et securité</p>
-			<button class="trajet"><a href="#">Voir nos trajets</a></button>
+			<button class="trajet"><a href="index.php?deco=1">Voir nos trajets</a></button>
 			</div>
 			<img class="img2" src="illustrations/les-usagers-peuvent-faire-remonter-leurs-doleances-c-est-le-moment-illustration-progres-nathalie-bertheux-1686159085.jpg" style="width:550px" height="300px"  alt="connexion-illustration">
 			<img class="img3"  src="illustrations/B9728243725Z.1_20210908113711_000+G51ISO16C.1-0.jpg" style="width:550px" height="370px" alt="connexion-illustration">

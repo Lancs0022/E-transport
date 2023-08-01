@@ -15,7 +15,9 @@ try {
     die("Erreur : " . $e->getMessage());
 }
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
+echo $_SERVER["REQUEST_METHOD"];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "Insert";
     $nom = htmlspecialchars($_POST["nom"]);
     $prenom = htmlspecialchars($_POST["prenom"]);
     $telephone = htmlspecialchars($_POST["telephone"]);

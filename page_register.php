@@ -39,13 +39,13 @@ session_start();
 			<img  src="illustrations/14.png" style="width:600px" alt="connexion-illustration">;
 			</div>
 			<div class="form">
-                <form action="script_register.php" method="post">
+                <form action="script_register.php" method="POST">
                     <h2>Registrer</h2>
                     <input type="text" name="nom"placeholder="Nom">
                     <input type="text" name="prenom"placeholder="Prénom">
                     <input type="number" name="telephone"placeholder="Telephone">
-                    <input type="password" name=""placeholder="Mot de passe">
-                    <button class="btnn" type="submit"><a href="script_register.php">Créer un compte</a></button>
+                    <input type="password" name="password"placeholder="Mot de passe">
+                    <button class="btnn" type="submit">Créer un compte</a></button>
                 </form>
 			</div>
 		</div>

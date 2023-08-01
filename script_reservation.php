@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if (isset($_SESSION['pseudo']) && !empty($_SESSION['pseudo'])) {
+if (isset($_SESSION['nom']) && !empty($_SESSION['nom'])) {
     $bdd = "e-transport";
     $DB_DSN = 'mysql:host=localhost;dbname=' . $bdd;
     $DB_USER = 'root';

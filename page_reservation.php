@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,8 +13,6 @@
 </head>
 <body>
 <?php
-    session_start();
-
     if (isset($_SESSION['nom'])) {
         echo "Connecté en tant que : " . $_SESSION["nom"];
     }
@@ -34,13 +35,13 @@
 		<div class="content">
 			<div class="side">
 				<h1>Reserver</br></br><span>votre place</span></h1>
-			<img  src="illustrations/bus-stop-concept-illustration_114360-4939.jpg" style="width:400px" alt="connexion-illustration">;
+			<img  src="illustrations/bus-stop-concept-illustration_114360-4939.jpg" style="width:400px" alt="connexion-illustration">
 			</div>
             <?php
-                if (isset($_SESSION['pseudo']) && !empty($_SESSION['pseudo'])) {
+                if (isset($_SESSION['nom']) && !empty($_SESSION['nom'])) {
             ?>
 			<div class="form">
-                <form action="script_reservation.php" method="post">
+                <form method="post" action="script_reservation.php">
                     <h2>RESERVATION</h2>
                     <input type="time" name="heure_prevue"placeholder="Date">
                     <input type="text" name="itineraire_demande"placeholder="Itinéraire">

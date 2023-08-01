@@ -45,8 +45,8 @@ if (isset($_SESSION['nom']) && !empty($_SESSION['nom'])) {
 
 <body>
     <?php
-    if (isset($_SESSION['pseudo'])) {
-        echo "Connecté en tant que : " . $_SESSION["pseudo"];
+    if (isset($_SESSION['nom'])) {
+        echo "Connecté en tant que : " . $_SESSION["nom"];
     }
     ?>
 
@@ -69,7 +69,7 @@ if (isset($_SESSION['nom']) && !empty($_SESSION['nom'])) {
         <div>
             <h1>Réservations du Client</h1>
             <?php
-            if (isset($_SESSION['pseudo']) && !empty($_SESSION['pseudo'])) {
+            if (isset($_SESSION['nom']) && !empty($_SESSION['nom'])) {
                 if (count($reservations) > 0) {
                     // Affiche le tableau des réservations du client s'il en a fait
                     ?>
